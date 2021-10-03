@@ -16,6 +16,6 @@ services:
       - "8080:8080"  # Don't do this in production!
     volumes:
       # update this to docker volumes if deploy on swarm
-      - ./config:/etc/traefik
-      - ./certs:/ssl-certs
+      - ${ROOT_PATH}/config:/etc/traefik
+      - ${ROOT_PATH}/certs:/ssl-certs
       - /var/run/docker.sock:/var/run/docker.sock:ro
